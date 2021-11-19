@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -999;
+}
+
+section {
+  padding: 5rem 4rem;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  -webkit-box-shadow: 7px 5px 18px -4px #000000;
+          box-shadow: 7px 5px 18px -4px #000000;
+}
+
+.navbar .container {
+  margin: 4rem 4rem 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .container .hero-img {
+  border-radius: 50%;
+  width: 15%;
+}
+
+.navbar .container nav {
+  margin-top: 2rem;
+}
+
+.navbar .container nav .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.navbar .container nav .hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: hotpink;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.navbar .container nav .hover-underline-animation:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.navbar .container nav a {
+  font-size: 1.6rem;
+  letter-spacing: .4rem;
+  margin-right: 5rem;
+}
+
+.navbar .container nav a:hover {
+  color: hotpink;
+}
+
+.about-me {
+  text-align: left;
+}
+
+.about-me .discord-tag {
+  color: hotpink;
+  cursor: pointer;
+}
+
+.about-me .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.about-me .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.about-me .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.about-me .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.full-container {
+  text-align: center;
+}
+
+.full {
+  width: 90%;
+}
+
+.sample-list-item {
+  margin: 2rem 2rem;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+}
+
+.price {
+  color: #00FF00;
+  font-size: 2rem;
+}
+
+.price-column {
+  padding-right: 5rem;
+}
+
+td {
+  height: 5rem;
+  vertical-align: top;
+}
+
+.item-description {
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    background-color: rgba(173, 173, 173, 0.5);
+    border-radius: 20px;
+    padding: 2rem;
+  }
+  .navbar .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .container .hero-img {
+    width: 40%;
+  }
+  .about-me {
+    text-align: center;
+  }
+  .about-me h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .full {
+    display: none;
+  }
+  .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #myVideo {
+    display: none;
+  }
+  body {
+    background-color: black;
+  }
+  .price {
+    font-size: 1.5rem;
+  }
+  .price-column {
+    text-align: center;
+    padding-right: 2rem;
+    width: 6rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

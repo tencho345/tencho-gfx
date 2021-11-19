@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tencho's life</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="media/avatar.png" type="image/svg+xml" />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="media/background.mp4" type="video/mp4" />
+    </video>
+
+    <div class="navbar">
+      <div class="container">
+        <img class="hero-img" src="media/avatar.png" />
+
+        <nav>
+          <ul class="nav-list">
+            <a href="#about-me" class="hover-underline-animation">About Me</a>
+            <a href="#samples" class="hover-underline-animation">Samples</a>
+            <a href="#prices" class="hover-underline-animation">Prices</a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <section id="about-me" class="about-me">
+      <div class="container">
+        <h1>About Me</h1>
+
+        <p class="about-me-text">
+          I love to listen to music in my leisure time and i am athletic ig. I
+          am a weeb too ig. :3
+          <br />
+          He/Him
+          <br />
+          For comms dm me in discord:
+          <span class="tooltip discord-tag">
+            <span role="button" onclick="myFunction()" onmouseout="outFunc()">
+              <span class="tooltiptext">Copy</span>
+              rubab is baka#0003
+            </span>
+          </span>
+          <br />
+          Also a competitive valorant player
+          <br />
+          from Bangladesh
+        </p>
+      </div>
+    </section>
+    <section id="samples" class="samples">
+      <div class="container">
+        <div class="full-container">
+          <img class="sample-list-item full" src="media/samples/image1.png" />
+          <img class="sample-list-item full" src="media/samples/image5.png" />
+          <img class="sample-list-item full" src="media/samples/image6.png" />
+        </div>
+        <br />
+        <div class="flex-container">
+          <img class="sample-list-item half" src="media/samples/image2.png" />
+          <img class="sample-list-item half" src="media/samples/image3.png" />
+        </div>
+
+        <div class="flex-container">
+          <img class="sample-list-item half" src="media/samples/image4.png" />
+        </div>
+      </div>
+    </section>
+
+    <section id="prices" class="prices">
+      <div class="container">
+        <h1>Prices</h1>
+        <table>
+          <tr>
+            <td class="price-column">
+              <span class="price">$2-5</span>
+            </td>
+            <td class="item-description">logo</td>
+          </tr>
+          <tr>
+            <td class="price-column">
+              <span class="price">$3-8</span>
+            </td>
+            <td class="item-description">Banner</td>
+          </tr>
+          <tr>
+            <td class="price-column">
+              <span class="price">$4-10</span>
+            </td>
+            <td class="item-description">Header</td>
+          </tr>
+          <tr>
+            <td class="price-column">
+              <span class="price">$5 nitro</span>
+            </td>
+            <td class="item-description">Logo and Banner</td>
+          </tr>
+          <tr>
+            <td class="price-column">
+              <span class="price">$10 nitro</span>
+            </td>
+            <td class="item-description">Logo, Banner and Thumbnail</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </body>
+
+  <footer style="text-align: center; font-size: 1.5rem; opacity: .5;">
+    Created by >kaitou_#5339
+  </footer>
+
+  <script>
+    function myFunction() {
+      var copyText = document.getElementById("myInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+
+      var tooltip = document.getElementById("myTooltip");
+      tooltip.innerHTML = "Copied: " + copyText.value;
+    }
+
+    function outFunc() {
+      var tooltip = document.getElementById("myTooltip");
+      tooltip.innerHTML = "Copy to clipboard";
+    }
+  </script>
+</html>
