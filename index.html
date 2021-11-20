@@ -38,11 +38,11 @@
           He/Him
           <br />
           For comms dm me in discord:
-          <span class="tooltip discord-tag">
-            <span role="button" onclick="myFunction()" onmouseout="outFunc()">
-              <span class="tooltiptext">Copy</span>
+          <span class=" tooltip" >
+            <span role="button" onclick="copyText()" id="discord-tag" class="discord-tag" >
               rubab is baka#0003
             </span>
+            <span class="tooltiptext" id="tooltiptext">Click to Copy</span>
           </span>
           <br />
           Also a competitive valorant player
@@ -114,19 +114,15 @@
   </footer>
 
   <script>
-    function myFunction() {
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(copyText.value);
+    function copyText() {
+      let textToCopy = document.getElementById("discord-tag").textContent;
+      navigator.clipboard.writeText(textToCopy);
 
-      var tooltip = document.getElementById("myTooltip");
-      tooltip.innerHTML = "Copied: " + copyText.value;
-    }
+      document.getElementById("tooltiptext").textContent = "Copied!";
 
-    function outFunc() {
-      var tooltip = document.getElementById("myTooltip");
-      tooltip.innerHTML = "Copy to clipboard";
+      setTimeout(() => {
+        document.getElementById("tooltiptext").textContent = "Copy to Clipboard";
+      }, 2000);
     }
   </script>
 </html>
